@@ -1317,6 +1317,26 @@ struct WhisperTokenizerWrapper: WhisperTokenizer {
 }
 
 extension WhisperTokenizerWrapper: Tokenizer {
+    func encode(text: String, addSpecialTokens: Bool) -> [Int] {
+        return []
+    }
+    
+    func applyChatTemplate(messages: [[String : String]]) throws -> [Int] {
+        return []
+    }
+    
+    func applyChatTemplate(messages: [[String : String]], chatTemplate: Tokenizers.ChatTemplateArgument) throws -> [Int] {
+        return []
+    }
+    
+    func applyChatTemplate(messages: [[String : String]], chatTemplate: String) throws -> [Int] {
+        return []
+    }
+    
+    func applyChatTemplate(messages: [[String : String]], chatTemplate: Tokenizers.ChatTemplateArgument?, addGenerationPrompt: Bool, truncation: Bool, maxLength: Int?, tools: [[String : Any]]?) throws -> [Int] {
+        return []
+    }
+    
     func tokenize(text: String) -> [String] {
         tokenizer.tokenize(text: text)
     }
